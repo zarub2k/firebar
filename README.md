@@ -1,2 +1,2 @@
 # firebar
-Firebase Hustle
+Firebase Hustle to experiment various functionalities
