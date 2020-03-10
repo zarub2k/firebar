@@ -9,7 +9,16 @@ exports.ping = functions.https.onRequest(async (_req, _res) => {
 });
 
 exports.onCreate = functions.firestore
-  .document('')
+  .document('tasks/{id}')
   .onCreate((data, context) => {
     console.log('Enters onCreate()');
+});
+
+exports.onWrite = functions.firestore
+  .document('')
+  .onWrite((change, context) => {
+    console.log('Enters onCreate()');
+
+    // change.before.data();
+    // change.after.data();
 });
