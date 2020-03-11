@@ -10,7 +10,7 @@ exports.ping = functions.https.onRequest(async (_req, _res) => {
 
 exports.onCreate = functions.firestore
   .document('tasks/{id}')
-  .onCreate((data, context) => {
+  .onCreate((snap, context) => {
     console.log('Enters onCreate()');
 });
 
@@ -26,6 +26,15 @@ exports.onWrite = functions.firestore
 exports.onUpdate = functions.firestore
   .document('')
   .onUpdate((change, context) => {
+    console.log('Enters onUpdate()');
     const newValue = change.after.data();
     const oldValue = change.before.data();
-  });
+});
+
+exports.onDelete = functions.firestore
+  .document('')
+  .onDelete((snap, context) => {
+    console.log('Enters onDelete()');
+
+    const deleteValue = snap.data();
+});
