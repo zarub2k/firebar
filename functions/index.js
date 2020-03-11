@@ -22,3 +22,10 @@ exports.onWrite = functions.firestore
     // change.before.data();
     // change.after.data();
 });
+
+exports.onUpdate = functions.firestore
+  .document('')
+  .onUpdate((change, context) => {
+    const newValue = change.after.data();
+    const oldValue = change.before.data();
+  });
