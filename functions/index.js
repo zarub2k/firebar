@@ -5,6 +5,9 @@ admin.initializeApp();
 
 const firestoreDb = admin.firestore();
 
+const firefn = require('./firestorefn');
+const authfn = require('./authfn');
+
 exports.ping = functions.https.onRequest(async (_req, _res) => {
   console.log('Enters ping()');
   _res.redirect(303, 'Response from ping()');
