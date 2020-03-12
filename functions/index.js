@@ -3,6 +3,8 @@ const functions = require('firebase-functions');
 const admin = require('firebase-admin');
 admin.initializeApp();
 
+const firestoreDb = admin.firestore();
+
 exports.ping = functions.https.onRequest(async (_req, _res) => {
   console.log('Enters ping()');
   _res.redirect(303, 'Response from ping()');
@@ -37,4 +39,11 @@ exports.onDelete = functions.firestore
     console.log('Enters onDelete()');
 
     const deleteValue = snap.data();
+});
+
+//other table updated
+exports.onChange = functions.firestore
+  .document('')
+  .onWrite((snap, context) => {
+    firestoreDb.doc('').set({}); //pass the new data here.
 });
