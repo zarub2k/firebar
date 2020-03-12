@@ -5,6 +5,7 @@ admin.initializeApp();
 
 const firestoreDb = admin.firestore();
 
+//Custom function modules
 const firefn = require('./firestorefn');
 const authfn = require('./authfn');
 
@@ -13,40 +14,8 @@ exports.ping = functions.https.onRequest(async (_req, _res) => {
   _res.redirect(303, 'Response from ping()');
 });
 
-exports.onCreate = functions.firestore
-  .document('tasks/{id}')
-  .onCreate((snap, context) => {
-    console.log('Enters onCreate()');
-});
-
-exports.onWrite = functions.firestore
-  .document('')
-  .onWrite((change, context) => {
-    console.log('Enters onCreate()');
-
-    // change.before.data();
-    // change.after.data();
-});
-
-exports.onUpdate = functions.firestore
-  .document('')
-  .onUpdate((change, context) => {
-    console.log('Enters onUpdate()');
-    const newValue = change.after.data();
-    const oldValue = change.before.data();
-});
-
-exports.onDelete = functions.firestore
-  .document('')
-  .onDelete((snap, context) => {
-    console.log('Enters onDelete()');
-
-    const deleteValue = snap.data();
-});
-
-//other table updated
-exports.onChange = functions.firestore
-  .document('')
-  .onWrite((snap, context) => {
-    firestoreDb.doc('').set({}); //pass the new data here.
-});
+exports.onCreate = firefn.onCreate();
+exports.onUpdate = firefn.onUpdate();
+exports.onDelete = firefn.onDelete();
+exports.onChange = firefn.onChange();
+exports.onWrite = firefn.onWrite();
