@@ -6,7 +6,7 @@ admin.initializeApp();
 const firestoreDb = admin.firestore();
 
 //Custom function modules
-const firefn = require('./firestorefn');
+// const firefn = require('./firestorefn');
 const authfn = require('./authfn');
 
 exports.ping = functions.https.onRequest(async (_req, _res) => {
