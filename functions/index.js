@@ -14,8 +14,11 @@ exports.ping = functions.https.onRequest(async (_req, _res) => {
   _res.redirect(303, 'Response from ping()');
 });
 
-exports.onCreate = firefn.onCreate();
-exports.onUpdate = firefn.onUpdate();
-exports.onDelete = firefn.onDelete();
-exports.onChange = firefn.onChange();
-exports.onWrite = firefn.onWrite();
+// exports.onCreate = firefn.onCreate();
+// exports.onUpdate = firefn.onUpdate();
+// exports.onDelete = firefn.onDelete();
+// exports.onChange = firefn.onChange();
+// exports.onWrite = firefn.onWrite();
+
+exports.user_signup = authfn.onRegister;
+exports.user_delete = authfn.onDelete;
