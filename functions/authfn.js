@@ -8,8 +8,6 @@ exports.onRegister = functions.auth.user().onCreate((user) => {
 });
 
 //User deletion handler
-
-
 const userDelete = function(user) {
   console.log('Enters authfn.onDelete()');
 }
