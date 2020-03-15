@@ -7,6 +7,10 @@ exports.onRegister = functions.auth.user().onCreate((user) => {
   // user.displayName
 });
 
+const userRegister = function(user) {
+  console.log('Enters authfn.onRegister()');
+}
+
 //User deletion handler
 const userDelete = function(user) {
   console.log('Enters authfn.onDelete()');
