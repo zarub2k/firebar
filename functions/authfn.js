@@ -1,17 +1,12 @@
 const functions = require('firebase-functions');
 
-//User registration handler
-exports.onRegister = functions.auth.user().onCreate((user) => {
+exports.userRegister = function(user) {
   console.log('Enters authfn.onRegister()');
-  // user.email
-  // user.displayName
-});
-
-const userRegister = function(user) {
-  console.log('Enters authfn.onRegister()');
+  return null;
 }
 
 //User deletion handler
-const userDelete = function(user) {
+exports.userDelete = function(user) {
   console.log('Enters authfn.onDelete()');
+  return null;
 }

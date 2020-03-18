@@ -21,9 +21,9 @@ exports.ping = functions.https.onRequest(async (_req, _res) => {
 // exports.onWrite = firefn.onWrite();
 
 exports.user_signup = functions.auth.user().onCreate((user) => {
-  authfn.userRegister(user);
+  return authfn.userRegister(user);
 });
 
 exports.user_delete = functions.auth.user().onDelete((user) => {
-  authfn.userDelete(user);
+  return authfn.userDelete(user);
 });
