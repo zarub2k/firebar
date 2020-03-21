@@ -2,7 +2,7 @@
 Firebase Hustle to experiment various functionalities
 
 ## Cloud functions
-* Setup cloud functions development locally
+* Local cloud function setup
 * Firestore trigger
   - Create
   - Update
