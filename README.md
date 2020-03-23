@@ -11,6 +11,11 @@ Firebase Hustle to experiment various functionalities
 * Authentication trigger
   - User create
   - User delete
+* Storage trigger
+  - onFinalize()
+  - onDelete()
+  - onArchive()
+  - onMetaUpdate()
 
 ## Firestore
 * Prepare the dev setup
