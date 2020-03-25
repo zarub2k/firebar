@@ -30,3 +30,7 @@ Firebase Hustle to experiment various functionalities
 ## Firebase Auth
 
 ## Firebase Storage
+  - store file
+  - get file
+  - update file
+  - delete file
