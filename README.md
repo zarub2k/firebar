@@ -1,5 +1,5 @@
 # firebar
-Firebase Hustle to experiment various functionalities
+Hustle to experiment various functionalities with Firebase platform. This will cover the following topics,
 
 ## Cloud functions
 * Local cloud function setup
