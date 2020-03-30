@@ -28,6 +28,8 @@ Hustle to experiment various functionalities in Firebase platform. This will cov
  * Realtime data watch
 
 ## Firebase Auth
+* User create
+* User authentication
 
 ## Firebase Storage
   - store file
