@@ -29,7 +29,9 @@ Hustle to experiment various functionalities in Firebase platform. This will cov
 
 ## Firebase Auth
 * User create
-* User authentication
+* Sign-in with email and password
+* Sign-in with social platform
+* Custom sign-in
 
 ## Firebase Storage
   - store file
