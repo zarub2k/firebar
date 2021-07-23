@@ -1,22 +1,24 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <button @click="onSignup">Signup</button>
 </template>
 
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
+<script>
+import AuthService from './services/AuthService';
 
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/master/active-rfcs/0040-script-setup.md
-</script>
+export default {
+  setup() {
+    const user = {
+      email: 'tham@gmail.com',
+      password: 'Tham#123'
+    };
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+    const onSignup = () => {
+      AuthService.signupWithEmail(user);
+    };
+
+    return {
+      onSignup
+    }
+  },
 }
-</style>
+</script>
